@@ -11,7 +11,7 @@ describe('fetchBreedDescription', () => {
     });
   });
 
-  it('checks if there is an invalid/non-existent breed passed in', (done) => {
+  it('returns an error if there is the cat breed is invalid or doesns\'t exist', (done) => {
     fetchBreedDescription('Mooch', (err, desc) => {      
       assert.equal(err, null);
       const expectedDesc = "Breed not found.";      
